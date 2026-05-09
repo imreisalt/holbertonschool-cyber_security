@@ -1,2 +1,2 @@
 #!/bin/bash
-if ! grep -i "starttls" /etc/postfix/main.cf 2>/dev/null; then echo "STARTTLS not configured"; fi
+grep -i "starttls" /etc/postfix/main.cf 2>/dev/null || echo "STARTTLS not configured"
